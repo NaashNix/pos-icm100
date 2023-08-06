@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="javafx-base-17.0.2-linux">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/lib/jar_files/javafx-base-17.0.2-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jar_files/javafx-base-17.0.2-win.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jar_files/javafx-controls-17.0.2-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jar_files/javafx-controls-17.0.2-win.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jar_files/javafx-fxml-17.0.2-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jar_files/javafx-fxml-17.0.2-win.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jar_files/javafx-graphics-17.0.2-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jar_files/javafx-graphics-17.0.2-win.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jar_files/javafx-swing-17.0.2-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jar_files/javafx-swing-17.0.2-win.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/lib/jar_files/jfoenix-17-0.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
