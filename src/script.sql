@@ -44,3 +44,9 @@ CREATE TABLE orderDetails(
     discountedAmount DOUBLE,
     CONSTRAINT FOREIGN KEY (orderID) REFERENCES orders(orderID)
 );
+
+CREATE TABLE users (
+    fullName VARCHAR(255),
+    username VARCHAR(255),
+    password VARCHAR(255)
+);
