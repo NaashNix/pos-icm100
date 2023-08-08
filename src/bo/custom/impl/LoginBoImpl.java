@@ -9,9 +9,17 @@ public class LoginBoImpl implements LoginBO {
     LoginDAO loginDAO = DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.LOGIN);
 
     @Override
-    public boolean checkPassword(String username) {
+    public boolean checkPassword(String username, String password) {
+        /*
+            If user entered password is matched with the passwordByUsername
+            Then this logic will return true. else any other case will return false.
+         */
+        
         String passwordByUsername = loginDAO.getPasswordByUsername(username);
-        return passwordByUsername != null;
+        if(passwordByUsername == null){
+            return false;
+        }else return passwordByUsername.equals(password);
+
     }
 
 }
