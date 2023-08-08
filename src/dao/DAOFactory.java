@@ -5,7 +5,7 @@ import dao.custom.impl.LoginDAOImpl;
 
 public class DAOFactory {
 
-    public static DAOFactory daoFactory;
+    private static DAOFactory daoFactory;
 
     public enum DAOTypes{
         LOGIN
