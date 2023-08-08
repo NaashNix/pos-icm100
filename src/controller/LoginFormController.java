@@ -11,9 +11,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import util.ObjectPasser;
 
 import java.io.IOException;
-import java.util.logging.Logger;
 
 public class LoginFormController {
 
@@ -28,6 +28,8 @@ public class LoginFormController {
 
         Boolean result = loginBO.checkPassword(username,password);
         if(Boolean.TRUE.equals(result)){
+            String userFullName = loginBO.getUserFullName(username);
+            ObjectPasser.userFullName = userFullName;
             Parent load = FXMLLoader.load(getClass().getResource("../view/MenuBar.fxml"));
             Scene scene = new Scene(load);
             Stage stage = new Stage();

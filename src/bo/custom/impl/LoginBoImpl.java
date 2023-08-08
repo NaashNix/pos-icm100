@@ -22,4 +22,9 @@ public class LoginBoImpl implements LoginBO {
 
     }
 
+    @Override
+    public String getUserFullName(String username) {
+        return loginDAO.getUserFullName(username);
+    }
+
 }

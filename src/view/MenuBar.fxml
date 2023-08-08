@@ -22,6 +22,10 @@
             <Image url="@assets/person-white.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="82.0" layoutY="20.0" prefHeight="46.0" prefWidth="178.0" text="Ravindu Samarawickrama" textFill="WHITE" wrapText="true" />
+      <Label fx:id="txtUserFullName" layoutX="82.0" layoutY="20.0" prefHeight="46.0" prefWidth="213.0" text="Ravindu Samarawickrama" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
