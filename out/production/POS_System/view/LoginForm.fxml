@@ -9,14 +9,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+<AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: white;" stylesheets="@style/LoginPageStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
     <children>
         <JFXButton layoutX="141.0" layoutY="331.0" onAction="#btnLoginOnClick" prefHeight="36.0" prefWidth="110.0" style="-fx-background-color: #2980b9;" text="LOGIN" textFill="WHITE" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="145.0">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font>
         </JFXButton>
-        <TextField fx:id="txtUsername" layoutX="125.0" layoutY="197.0" prefHeight="24.0" prefWidth="197.0" promptText="User Name" AnchorPane.leftAnchor="101.0" />
+        <TextField fx:id="txtUsername" layoutX="125.0" layoutY="197.0" prefHeight="24.0" prefWidth="197.0" promptText="User Name" styleClass="usernameField" AnchorPane.leftAnchor="101.0" />
         <PasswordField fx:id="txtPassword" layoutX="101.0" layoutY="246.0" prefHeight="24.0" prefWidth="197.0" promptText="Password" AnchorPane.leftAnchor="101.0" />
         <ImageView layoutX="152.0" layoutY="52.0" AnchorPane.leftAnchor="152.0">
             <Image url="@../view/assets/icons8-administrator-male.png" />
