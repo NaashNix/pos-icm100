@@ -6,12 +6,12 @@ import dao.custom.LoginDAO;
 
 public class LoginBoImpl implements LoginBO {
 
+    LoginDAO loginDAO = DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.LOGIN);
+
     @Override
     public boolean checkPassword(String username) {
-        LoginDAO loginDAO = DAOFactory.getDaoFactory().getDAO(DAOFactory.DAOTypes.LOGIN);
         String passwordByUsername = loginDAO.getPasswordByUsername(username);
         return passwordByUsername != null;
-        
     }
 
 }
