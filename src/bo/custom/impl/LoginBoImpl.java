@@ -14,7 +14,7 @@ public class LoginBoImpl implements LoginBO {
             If user entered password is matched with the passwordByUsername
             Then this logic will return true. else any other case will return false.
          */
-        
+
         String passwordByUsername = loginDAO.getPasswordByUsername(username);
         if(passwordByUsername == null){
             return false;
