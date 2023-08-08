@@ -15,7 +15,7 @@ public class LoginDAOImpl implements LoginDAO {
             if(resultSet.next()){
                 return resultSet.getString("password");
             }
-            
+
             return null;
 
         } catch (SQLException | ClassNotFoundException throwables) {
