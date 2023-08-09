@@ -34,6 +34,7 @@ public class MenuBarController implements Initializable {
 
         timeline.setCycleCount(Animation.INDEFINITE);
         timeline.play();
+
     }
 
 }
