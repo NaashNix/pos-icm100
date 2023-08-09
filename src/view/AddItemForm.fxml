@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="719.0" prefWidth="1037.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddItemController">
+<AnchorPane prefHeight="667.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddItemController">
    <children>
       <Label layoutX="26.0" layoutY="18.0" text="ADD ITEMS">
          <font>
@@ -29,7 +29,7 @@
       <TextField layoutX="637.0" layoutY="80.0" prefHeight="24.0" prefWidth="302.0" promptText="Batch No" />
       <Label layoutX="533.0" layoutY="83.0" text="Item Price :" />
       <Separator layoutX="47.0" layoutY="253.0" prefHeight="0.0" prefWidth="887.0" />
-      <TableView layoutX="47.0" layoutY="351.0" prefHeight="334.0" prefWidth="887.0">
+      <TableView layoutX="47.0" layoutY="291.0" prefHeight="334.0" prefWidth="887.0">
         <columns>
           <TableColumn prefWidth="75.0" text="C1" />
           <TableColumn prefWidth="75.0" text="C2" />

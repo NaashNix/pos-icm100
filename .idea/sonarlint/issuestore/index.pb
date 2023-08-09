@@ -1,6 +1,4 @@
 
-I
-src/view/AddItemForm.fxml,1/1/11bc689a42151172df7fecbc2631bcd0dcc61ea4
 U
 %src/controller/AddItemController.java,c/9/c941749f9fc22dc56a4d0dccc54275b46aa3bd69
 >
