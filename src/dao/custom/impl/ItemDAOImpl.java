@@ -10,7 +10,7 @@ public class ItemDAOImpl implements ItemDAO {
     @Override
     public boolean save(Item item) {
         try {
-            return CrudUtil.executeUpdate("INSERT INTO items VALUES(?,?,?,?,?,?,?,?)",
+            return CrudUtil.executeUpdate("INSERT INTO item VALUES(?,?,?,?,?,?,?)",
                     item.getItemID(),
                     item.getItemName(),
                     item.getBatchNumber(),

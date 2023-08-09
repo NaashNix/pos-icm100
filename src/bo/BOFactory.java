@@ -1,6 +1,7 @@
 package bo;
 
 import bo.custom.LoginBO;
+import bo.custom.impl.ItemBoImpl;
 import bo.custom.impl.LoginBoImpl;
 
 public class BOFactory {
@@ -16,17 +17,19 @@ public class BOFactory {
         }
     }
 
-    public LoginBO getBo(BoTypes boTypes){
+    public SuperBO getBo(BoTypes boTypes){
         switch (boTypes){
             case LOGIN:
                 return new LoginBoImpl();
+            case ITEM:
+                return new ItemBoImpl();
             default:
                 return null;
         }
     }
 
     public enum BoTypes{
-        LOGIN
+        LOGIN, ITEM
     }
 
 }

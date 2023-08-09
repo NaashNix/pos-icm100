@@ -1,6 +1,4 @@
 
-U
-%src/controller/AddItemController.java,c/9/c941749f9fc22dc56a4d0dccc54275b46aa3bd69
 >
 src/script.sql,8/f/8fabe3755e1ead5799c15bb382666c6712f45baa
 Q
@@ -9,15 +7,9 @@ G
 src/view/LoginForm.fxml,3/6/360d6d8c13934676281e9df5abd975e1337e3719
 E
 src/dao/CrudUtil.java,5/1/51ef932cd0902cea63ec682bc6851548809628a8
-E
-src/bo/BOFactory.java,5/8/585c440c7082b46076f342a118f2ad4c9a3024ab
 H
 src/db/DbConnection.java,8/e/8e2efd5556e1055de49628692613d2236e3e330d
 G
 src/AppInitializer.java,5/8/580cc932433633b711bc392ae543e0f12b1bae87
 J
 src/util/ObjectPasser.java,f/a/fa2a51cb048929d172d0f41177703b414a64de33
-J
-src/bo/custom/LoginBO.java,a/6/a6263c6be353201eac12ce91ac68ccaef0f7e4df
-S
-#src/bo/custom/impl/LoginBoImpl.java,f/5/f50bab4271fb658eb0e8e6bc51161ff925d1f705
