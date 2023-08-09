@@ -23,8 +23,6 @@ J
 src/util/ObjectPasser.java,f/a/fa2a51cb048929d172d0f41177703b414a64de33
 L
 src/dao/custom/LoginDAO.java,f/4/f47bf3b04a5ffbc9523b21eec5261b0577324049
-U
-%src/dao/custom/impl/LoginDAOImpl.java,d/8/d8702fe775049e85bc28906a12ab4991c62f970a
 J
 src/bo/custom/LoginBO.java,a/6/a6263c6be353201eac12ce91ac68ccaef0f7e4df
 S
