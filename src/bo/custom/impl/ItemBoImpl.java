@@ -5,6 +5,11 @@ import dao.DAOFactory;
 import dao.custom.ItemDAO;
 import dto.ItemDTO;
 import entity.Item;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+
+import java.util.ArrayList;
 
 public class ItemBoImpl implements ItemBO {
 
@@ -32,5 +37,24 @@ public class ItemBoImpl implements ItemBO {
         String lastItemId = itemDAO.getLastItemId();
         int lastId = Integer.parseInt(lastItemId.substring(1));
         return String.format("I%03d",++lastId);
+    }
+
+    @Override
+    public ObservableList<ItemDTO> getAllItems() {
+        ArrayList<Item> allItems = itemDAO.getAllItems();
+        ObservableList<ItemDTO> allItemsForTable = FXCollections.observableArrayList();
+        for (Item a: allItems
+             ) {
+            allItemsForTable.add(new ItemDTO(
+                    a.getItemID(),
+                    a.getItemName(),
+                    a.getBatchNumber(),
+                    a.getPrice(),
+                    a.getQty(),
+                    a.getSupplier(),
+                    a.getExpireDate()
+            ));
+        }
+        return allItemsForTable;
     }
 }
