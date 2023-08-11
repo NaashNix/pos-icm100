@@ -59,6 +59,6 @@ public class ItemDAOImpl implements ItemDAO {
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();
         }
-        return null;
+        return allItems;
     }
 }
