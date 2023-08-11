@@ -24,6 +24,10 @@ public class AddItemController {
 
     ItemBO itemBO = (ItemBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.ITEM);
 
+    public void initialize(){
+        txtItemId.setText(itemBO.getNextID());
+    }
+
     public void btnAddOnAction(ActionEvent actionEvent) {
 
         ItemDTO itemDTO = new ItemDTO(

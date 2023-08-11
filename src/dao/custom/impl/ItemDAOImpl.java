@@ -29,7 +29,7 @@ public class ItemDAOImpl implements ItemDAO {
     @Override
     public String getLastItemId() {
         try {
-            ResultSet resultSet = CrudUtil.executeQuery("SELECT*FROM Item ORDER BY itemID DESC LIMIT 1");
+            ResultSet resultSet = CrudUtil.executeQuery("SELECT*FROM item ORDER BY itemID DESC LIMIT 1");
             if(resultSet.next()){
                 return resultSet.getString("itemID");
             }
