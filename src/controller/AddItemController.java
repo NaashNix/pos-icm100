@@ -32,7 +32,8 @@ public class AddItemController {
     ItemBO itemBO = (ItemBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.ITEM);
 
     public void initialize(){
-        txtItemId.setText(itemBO.getNextID());
+
+        generateAndSetNextId();
 
         colItemID.setCellValueFactory(new PropertyValueFactory<>("itemID"));
         colItemName.setCellValueFactory(new PropertyValueFactory<>("itemName"));
@@ -43,6 +44,10 @@ public class AddItemController {
 
         setDataToTable();
 
+    }
+
+    private void generateAndSetNextId(){
+        txtItemId.setText(itemBO.getNextID());
     }
 
     private void setDataToTable() {
@@ -64,5 +69,30 @@ public class AddItemController {
 
         boolean b = itemBO.saveItem(itemDTO);
 
+        if(b){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION,"Item Saved!");
+            alert.show();
+
+            // Clear Fields
+            clearFields();
+
+            // Generate Next ItemID
+            generateAndSetNextId();
+
+            //Reload the table
+            setDataToTable();
+        }
+
     }
+
+    public void clearFields(){
+        txtItemId.clear();
+        txtItemName.clear();
+        txtItemPrice.clear();
+        txtBatchNumber.clear();
+        txtSupplierName.clear();
+        txtQty.clear();
+        pickerExpireDate.getEditor().clear();
+    }
+
 }
