@@ -3,8 +3,10 @@ package controller;
 import bo.BOFactory;
 import bo.custom.ItemBO;
 import dto.ItemDTO;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 
 import java.sql.Date;
@@ -31,6 +33,21 @@ public class AddItemController {
 
     public void initialize(){
         txtItemId.setText(itemBO.getNextID());
+
+        colItemID.setCellValueFactory(new PropertyValueFactory<>("itemID"));
+        colItemName.setCellValueFactory(new PropertyValueFactory<>("itemName"));
+        colBatchNo.setCellValueFactory(new PropertyValueFactory<>("batchNumber"));
+        colItemPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        colExpireDate.setCellValueFactory(new PropertyValueFactory<>("expireDate"));
+        colSupplier.setCellValueFactory(new PropertyValueFactory<>("supplier"));
+
+        setDataToTable();
+
+    }
+
+    private void setDataToTable() {
+        ObservableList<ItemDTO> allItems = itemBO.getAllItems();
+        tblItems.setItems(allItems);
     }
 
     public void btnAddOnAction(ActionEvent actionEvent) {
