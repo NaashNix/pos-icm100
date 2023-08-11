@@ -5,4 +5,6 @@ import entity.Item;
 
 public interface ItemDAO extends SuperDAO {
     public boolean save(Item item);
+
+    public String getLastItemId();
 }

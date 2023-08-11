@@ -26,7 +26,7 @@
       <Label layoutX="533.0" layoutY="156.0" text="Exp Date :" />
       <TextField fx:id="txtSupplierName" layoutX="637.0" layoutY="116.0" prefHeight="24.0" prefWidth="302.0" promptText="Supplier Name" />
       <Label layoutX="533.0" layoutY="119.0" text="Supplier :" />
-      <TextField fx:id="txtItemPrice" layoutX="637.0" layoutY="80.0" prefHeight="24.0" prefWidth="302.0" promptText="Price" />
+      <TextField fx:id="txtItemPrice" layoutX="637.0" layoutY="80.0" onKeyReleased="#txtPriceOnKeyReleased" prefHeight="24.0" prefWidth="302.0" promptText="Price" />
       <Label layoutX="533.0" layoutY="83.0" text="Item Price :" />
       <Separator layoutX="47.0" layoutY="253.0" prefHeight="0.0" prefWidth="887.0" />
       <TableView layoutX="47.0" layoutY="291.0" prefHeight="334.0" prefWidth="887.0">
