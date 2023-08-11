@@ -4,9 +4,7 @@ import bo.BOFactory;
 import bo.custom.ItemBO;
 import dto.ItemDTO;
 import javafx.event.ActionEvent;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 
 import java.sql.Date;
@@ -20,6 +18,13 @@ public class AddItemController {
     public TextField txtItemPrice;
     public DatePicker pickerExpireDate;
     public TextField txtQty;
+    public TableColumn colItemID;
+    public TableColumn colItemName;
+    public TableColumn colBatchNo;
+    public TableColumn colItemPrice;
+    public TableColumn colSupplier;
+    public TableColumn colExpireDate;
+    public TableView tblItems;
 
 
     ItemBO itemBO = (ItemBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.ITEM);
