@@ -6,7 +6,6 @@ import com.jfoenix.controls.JFXButton;
 import dto.ItemDTO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
@@ -120,6 +119,11 @@ public class AddItemController {
                 alert.show();
                 clearFields();
                 initialize();
+
+                // Restoring ADD button
+                btnADD.setText("ADD");
+                btnADD.setStyle("-fx-background-color:  #1abc9c");
+                isEdit = false;
             }else{
                 System.out.println("Not Updated!");
             }
