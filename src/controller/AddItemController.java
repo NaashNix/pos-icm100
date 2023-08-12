@@ -2,6 +2,7 @@ package controller;
 
 import bo.BOFactory;
 import bo.custom.ItemBO;
+import com.jfoenix.controls.JFXButton;
 import dto.ItemDTO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -27,6 +28,7 @@ public class AddItemController {
     public TableColumn colSupplier;
     public TableColumn colExpireDate;
     public TableView tblItems;
+    public JFXButton btnADD;
     private int selectedIndex = -1;
     private ObservableList<ItemDTO> allItems;
     ItemBO itemBO = (ItemBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.ITEM);
@@ -47,7 +49,6 @@ public class AddItemController {
         // Set listener to the table
         tblItems.getSelectionModel().selectedIndexProperty().addListener((observable, oldValue, newValue) -> {
             selectedIndex = (int) newValue;
-            loadItemDataToFields(allItems.get(selectedIndex));
         });
 
     }
@@ -112,7 +113,15 @@ public class AddItemController {
         pickerExpireDate.getEditor().clear();
     }
 
-    public void btnUpdateOnAction(ActionEvent actionEvent) {
+    public void btnEditOnAction(ActionEvent actionEvent) {
+        if(selectedIndex != -1){
+            loadItemDataToFields(allItems.get(selectedIndex));
+            btnADD.setText("UPDATE");
+            btnADD.setStyle("-fx-background-color:  #f1c40f");
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR,"Please select item first.");
+            alert.show();
+        }
 
     }
 

@@ -39,7 +39,7 @@
             <TableColumn fx:id="colExpireDate" prefWidth="129.33331298828125" text="Expire Date" />
         </columns>
       </TableView>
-      <JFXButton buttonType="RAISED" layoutX="840.0" layoutY="188.0" onAction="#btnAddOnAction" prefHeight="32.0" prefWidth="97.0" style="-fx-background-color: #1abc9c;" text="ADD">
+      <JFXButton fx:id="btnADD" buttonType="RAISED" layoutX="840.0" layoutY="188.0" onAction="#btnAddOnAction" prefHeight="32.0" prefWidth="97.0" style="-fx-background-color: #1abc9c;" text="ADD">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
@@ -51,7 +51,7 @@
       </JFXButton>
       <DatePicker fx:id="pickerExpireDate" layoutX="637.0" layoutY="152.0" prefHeight="24.0" prefWidth="302.0" />
       <TextField fx:id="txtQty" layoutX="304.0" layoutY="80.0" prefHeight="24.0" prefWidth="144.0" promptText="Quantity On Hand" />
-      <JFXButton buttonType="RAISED" layoutX="840.0" layoutY="616.0" onAction="#btnUpdateOnAction" prefHeight="32.0" prefWidth="97.0" style="-fx-background-color: #f1c40f;" text="Update">
+      <JFXButton buttonType="RAISED" layoutX="840.0" layoutY="616.0" onAction="#btnEditOnAction" prefHeight="32.0" prefWidth="97.0" style="-fx-background-color: #f1c40f;" text="Edit">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
