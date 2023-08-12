@@ -27,8 +27,8 @@ public class AddItemController {
     public TableColumn colSupplier;
     public TableColumn colExpireDate;
     public TableView tblItems;
-
-
+    private int selectedIndex = -1;
+    private ObservableList<ItemDTO> allItems;
     ItemBO itemBO = (ItemBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.ITEM);
 
     public void initialize(){
@@ -44,6 +44,23 @@ public class AddItemController {
 
         setDataToTable();
 
+        // Set listener to the table
+        tblItems.getSelectionModel().selectedIndexProperty().addListener((observable, oldValue, newValue) -> {
+            selectedIndex = (int) newValue;
+            loadItemDataToFields(allItems.get(selectedIndex));
+        });
+
+    }
+
+    private void loadItemDataToFields(ItemDTO selectedItem){
+        ItemDTO selectedItemDetails = itemBO.getItemByID(selectedItem.getItemID());
+        txtSupplierName.setText(selectedItemDetails.getSupplier());
+        txtBatchNumber.setText(selectedItemDetails.getBatchNumber());
+        txtItemId.setText(selectedItemDetails.getItemID());
+        txtItemPrice.setText(String.format("%.2f",selectedItemDetails.getPrice()));
+        pickerExpireDate.getEditor().setText(String.valueOf(selectedItemDetails.getExpireDate()));
+        txtItemName.setText(selectedItemDetails.getItemName());
+        txtQty.setText(String.format("%.2f",selectedItemDetails.getQty()));
     }
 
     private void generateAndSetNextId(){
@@ -51,7 +68,7 @@ public class AddItemController {
     }
 
     private void setDataToTable() {
-        ObservableList<ItemDTO> allItems = itemBO.getAllItems();
+        allItems = itemBO.getAllItems();
         tblItems.setItems(allItems);
     }
 
