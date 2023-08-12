@@ -57,4 +57,21 @@ public class ItemBoImpl implements ItemBO {
         }
         return allItemsForTable;
     }
+
+    @Override
+    public ItemDTO getItemByID(String itemID) {
+        Item itemById = itemDAO.getItemById(itemID);
+        if(itemById != null){
+            return new ItemDTO(
+                    itemById.getItemID(),
+                    itemById.getItemName(),
+                    itemById.getBatchNumber(),
+                    itemById.getPrice(),
+                    itemById.getQty(),
+                    itemById.getSupplier(),
+                    itemById.getExpireDate()
+            );
+        }
+        return null;
+    }
 }
