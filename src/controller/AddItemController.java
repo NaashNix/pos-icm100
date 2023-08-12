@@ -7,7 +7,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.KeyEvent;
+
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -95,4 +95,11 @@ public class AddItemController {
         pickerExpireDate.getEditor().clear();
     }
 
+    public void btnUpdateOnAction(ActionEvent actionEvent) {
+
+    }
+
+    public void btnDeleteOnAction(ActionEvent actionEvent) {
+
+    }
 }
