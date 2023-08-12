@@ -27,8 +27,6 @@ C
 src/bo/SuperBO.java,9/b/9b5348fcc3e83e041069796e9d3abc0dc750b27c
 J
 src/bo/custom/LoginBO.java,a/6/a6263c6be353201eac12ce91ac68ccaef0f7e4df
-E
-src/bo/BOFactory.java,5/8/585c440c7082b46076f342a118f2ad4c9a3024ab
 W
 'src/controller/LoginFormController.java,7/4/7492ebf3259d3f6a1bf20a354fdfc0c0e301185f
 S
