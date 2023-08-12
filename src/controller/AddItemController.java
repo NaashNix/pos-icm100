@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXButton;
 import dto.ItemDTO;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
@@ -32,6 +33,7 @@ public class AddItemController {
     private int selectedIndex = -1;
     private ObservableList<ItemDTO> allItems;
     ItemBO itemBO = (ItemBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.ITEM);
+    private boolean isEdit = false;
 
     public void initialize(){
 
@@ -75,32 +77,53 @@ public class AddItemController {
 
     public void btnAddOnAction(ActionEvent actionEvent) {
 
-        ItemDTO itemDTO = new ItemDTO(
-                txtItemId.getText(),
-                txtItemName.getText(),
-                txtBatchNumber.getText(),
-                Double.parseDouble(txtItemPrice.getText()),
-                Double.parseDouble(txtQty.getText()),
-                txtSupplierName.getText(),
-                Date.valueOf(LocalDate.now())
-        );
+        if(!isEdit){
+            ItemDTO itemDTO = new ItemDTO(
+                    txtItemId.getText(),
+                    txtItemName.getText(),
+                    txtBatchNumber.getText(),
+                    Double.parseDouble(txtItemPrice.getText()),
+                    Double.parseDouble(txtQty.getText()),
+                    txtSupplierName.getText(),
+                    Date.valueOf(LocalDate.now())
+            );
 
-        boolean b = itemBO.saveItem(itemDTO);
+            boolean b = itemBO.saveItem(itemDTO);
 
-        if(b){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION,"Item Saved!");
-            alert.show();
+            if(b){
+                Alert alert = new Alert(Alert.AlertType.INFORMATION,"Item Saved!");
+                alert.show();
 
-            // Clear Fields
-            clearFields();
+                // Clear Fields
+                clearFields();
 
-            // Generate Next ItemID
-            generateAndSetNextId();
+                // Generate Next ItemID
+                generateAndSetNextId();
 
-            //Reload the table
-            setDataToTable();
+                //Reload the table
+                setDataToTable();
+            }
+        }else {
+            // Item Update method
+            boolean updateResult = itemBO.updateItem(new ItemDTO(
+                    txtItemId.getText(),
+                    txtItemName.getText(),
+                    txtBatchNumber.getText(),
+                    Double.parseDouble(txtItemPrice.getText()),
+                    Double.parseDouble(txtQty.getText()),
+                    txtSupplierName.getText(),
+                    Date.valueOf(LocalDate.now())
+            ));
+
+            if(updateResult){
+                Alert alert = new Alert(Alert.AlertType.INFORMATION,"Successfully Updated!");
+                alert.show();
+                clearFields();
+                initialize();
+            }else{
+                System.out.println("Not Updated!");
+            }
         }
-
     }
 
     public void clearFields(){
@@ -118,6 +141,7 @@ public class AddItemController {
             loadItemDataToFields(allItems.get(selectedIndex));
             btnADD.setText("UPDATE");
             btnADD.setStyle("-fx-background-color:  #f1c40f");
+            isEdit = true;
         }else{
             Alert alert = new Alert(Alert.AlertType.ERROR,"Please select item first.");
             alert.show();

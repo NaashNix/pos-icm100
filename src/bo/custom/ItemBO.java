@@ -13,4 +13,6 @@ public interface ItemBO extends SuperBO {
     public ObservableList<ItemDTO> getAllItems();
 
     public ItemDTO getItemByID(String itemID);
+
+    public boolean updateItem(ItemDTO itemDTO);
 }
