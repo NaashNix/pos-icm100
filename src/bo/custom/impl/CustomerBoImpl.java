@@ -23,4 +23,11 @@ public class CustomerBoImpl implements CustomerBO {
 
         return customerDAO.saveCustomer(customer);
     }
+
+    @Override
+    public String generateNextCustomerID() {
+        String lastItemId = customerDAO.getLastCustomerID();
+        int lastId = Integer.parseInt(lastItemId.substring(1));
+        return String.format("C%03d",++lastId);
+    }
 }

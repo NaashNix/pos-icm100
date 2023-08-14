@@ -35,8 +35,6 @@ I
 src/bo/custom/ItemBO.java,5/6/566e7d12aa26f124ad9900a71128f277c83a2a18
 U
 %src/controller/AddItemController.java,c/9/c941749f9fc22dc56a4d0dccc54275b46aa3bd69
-R
-"src/bo/custom/impl/ItemBoImpl.java,4/8/48322e41eed8286f0deb3aaef3091030e35a85bf
 W
 'src/controller/DashboardController.java,9/4/94cea2dd1c2ab300175205d98b2203846b71e7d4
 G

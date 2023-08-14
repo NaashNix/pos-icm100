@@ -5,4 +5,7 @@ import dto.CustomerDTO;
 
 public interface CustomerBO extends SuperBO {
     public boolean saveCustomer(CustomerDTO customerDTO);
+
+    public String generateNextCustomerID();
+
 }

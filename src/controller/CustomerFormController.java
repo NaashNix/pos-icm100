@@ -3,8 +3,10 @@ package controller;
 import bo.BOFactory;
 import bo.custom.CustomerBO;
 import com.jfoenix.controls.JFXButton;
+import dto.CustomerDTO;
 import entity.Customer;
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -26,11 +28,47 @@ public class CustomerFormController {
     public TextField txtNIC;
     private CustomerBO customerBO = (CustomerBO)BOFactory.getBoFactory().getBo(BOFactory.BoTypes.CUSTOMER);
 
+    public void initialize(){
+        txtCustomerID.setText(customerBO.generateNextCustomerID());
+    }
+
+
+
     public void btnAddOnAction(ActionEvent actionEvent) {
-        // Validation
+        // Validation (Empty Text Validation)
         if(emptyValidation()){
-            System.out.println("All Text Fields Are good!");
+            boolean saveResult = customerBO.saveCustomer(new CustomerDTO(
+                    txtCustomerID.getText(),
+                    txtFirstName.getText(),
+                    txtLastName.getText(),
+                    txtNIC.getText(),
+                    txtAddress.getText(),
+                    txtContactNumber.getText()
+            ));
+
+            Alert alert;
+            if(saveResult){
+                alert = new Alert(Alert.AlertType.INFORMATION, "Customer Saved Successfully!");
+            }else{
+                alert = new Alert(Alert.AlertType.WARNING, "Customer not saved!");
+            }
+            alert.show();
+
+            initialize();
+            clearFields();
+
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR,"Please fill all text fields");
+            alert.show();
         }
+    }
+
+    private void clearFields() {
+        txtFirstName.clear();
+        txtLastName.clear();
+        txtNIC.clear();
+        txtContactNumber.clear();
+        txtAddress.clear();
     }
 
     public boolean emptyValidation(){
@@ -47,4 +85,6 @@ public class CustomerFormController {
 
     public void btnDeleteOnAction(ActionEvent actionEvent) {
     }
+
+
 }
