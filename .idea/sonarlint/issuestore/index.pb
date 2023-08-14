@@ -37,9 +37,5 @@ G
 src/view/LoginForm.fxml,3/6/360d6d8c13934676281e9df5abd975e1337e3719
 I
 src/view/AddItemForm.fxml,1/1/11bc689a42151172df7fecbc2631bcd0dcc61ea4
-G
-src/dao/DAOFactory.java,9/f/9f9767f330c3d674b64b13bf8d78355a1bc26128
-E
-src/bo/BOFactory.java,5/8/585c440c7082b46076f342a118f2ad4c9a3024ab
 H
 src/dto/CustomerDTO.java,4/7/47335306aa543fd75295c1dca4058e52b5606dd1
