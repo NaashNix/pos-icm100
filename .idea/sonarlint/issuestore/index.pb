@@ -31,8 +31,6 @@ H
 src/db/DbConnection.java,8/e/8e2efd5556e1055de49628692613d2236e3e330d
 D
 src/dto/ItemDTO.java,3/f/3fffa2e587c320bb54a783e4241cd0f27a3da4fa
-I
-src/bo/custom/ItemBO.java,5/6/566e7d12aa26f124ad9900a71128f277c83a2a18
 U
 %src/controller/AddItemController.java,c/9/c941749f9fc22dc56a4d0dccc54275b46aa3bd69
 G

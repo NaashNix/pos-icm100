@@ -3,10 +3,12 @@ package dao.custom.impl;
 import dao.CrudUtil;
 import dao.custom.ItemDAO;
 import entity.Item;
+import javafx.util.Pair;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ItemDAOImpl implements ItemDAO {
     @Override
@@ -100,5 +102,22 @@ public class ItemDAOImpl implements ItemDAO {
             throwables.printStackTrace();
         }
         return false;
+    }
+
+    @Override
+    public HashMap<String, String> getItemNames() {
+        HashMap<String, String> itemsAndNames = new HashMap<>();
+        try {
+            ResultSet resultSet = CrudUtil.executeQuery("SELECT * FROM item");
+            while(resultSet.next()){
+                itemsAndNames.put(
+                            resultSet.getString("itemID"),
+                            resultSet.getString("itemName")
+                        );
+            }
+        } catch (SQLException | ClassNotFoundException throwables) {
+            throwables.printStackTrace();
+        }
+        return itemsAndNames;
     }
 }
