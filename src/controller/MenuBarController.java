@@ -49,4 +49,11 @@ public class MenuBarController implements Initializable {
         playgroundAnchorpane.getChildren().clear();
         playgroundAnchorpane.getChildren().add(load);
     }
+
+    public void manageCustomerOnAction(ActionEvent actionEvent) throws IOException {
+        URL resource = getClass().getResource("/view/CustomerForm.fxml");
+        Parent load = FXMLLoader.load(resource);
+        playgroundAnchorpane.getChildren().clear();
+        playgroundAnchorpane.getChildren().add(load);
+    }
 }

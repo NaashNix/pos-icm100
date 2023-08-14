@@ -11,10 +11,6 @@ J
 src/util/ObjectPasser.java,f/a/fa2a51cb048929d172d0f41177703b414a64de33
 O
 src/view/style/MenuBarStyle.css,e/1/e181acede19fb86a71578a05c772d9d5b2e291f1
-E
-src/view/MenuBar.fxml,9/7/97b280b1f6cb19ad5741510c1d911166b4034201
-U
-%src/controller/MenuBarController.java,f/3/f3533b44741a8c5615e68246cf4f0c69cf2b554f
 U
 %src/dao/custom/impl/LoginDAOImpl.java,d/8/d8702fe775049e85bc28906a12ab4991c62f970a
 E
@@ -35,10 +31,6 @@ H
 src/db/DbConnection.java,8/e/8e2efd5556e1055de49628692613d2236e3e330d
 D
 src/dto/ItemDTO.java,3/f/3fffa2e587c320bb54a783e4241cd0f27a3da4fa
-K
-src/dao/custom/ItemDAO.java,2/8/28948601150bf46a916489c2e915880ee710a9e0
-T
-$src/dao/custom/impl/ItemDAOImpl.java,6/8/68d5d42978325d0a8b8d2a00cad121cc3283f7ff
 I
 src/bo/custom/ItemBO.java,5/6/566e7d12aa26f124ad9900a71128f277c83a2a18
 U

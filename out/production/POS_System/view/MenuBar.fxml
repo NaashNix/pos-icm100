@@ -53,7 +53,7 @@
       </MenuButton>
       <MenuButton id="btnMenuCustomers" layoutX="602.0" layoutY="18.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="131.0" text="Customers" textFill="WHITE">
          <items>
-            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" onAction="#manageCustomerOnAction" text="Manage Customers" />
             <MenuItem mnemonicParsing="false" text="Action 2" />
          </items>
          <font>
