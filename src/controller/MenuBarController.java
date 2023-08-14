@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import lombok.SneakyThrows;
 import util.ObjectPasser;
 
 import java.io.IOException;
@@ -26,10 +27,17 @@ public class MenuBarController implements Initializable {
     public LocalTime currentTime;
     public AnchorPane playgroundAnchorpane;
 
+    @SneakyThrows
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         txtUserFullName.setText(ObjectPasser.userFullName);
         startClock();
+
+        // Load Dashboard
+        URL resource = getClass().getResource("/view/Dashboard.fxml");
+        Parent load = FXMLLoader.load(resource);
+        playgroundAnchorpane.getChildren().clear();
+        playgroundAnchorpane.getChildren().add(load);
     }
 
     private void startClock() {

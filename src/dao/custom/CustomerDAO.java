@@ -8,4 +8,6 @@ public interface CustomerDAO extends SuperDAO {
 
     public String getLastCustomerID();
 
+    public Customer findCustomerByContactNumber(String contactNumber);
+
 }

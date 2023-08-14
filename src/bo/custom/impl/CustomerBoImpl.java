@@ -30,4 +30,18 @@ public class CustomerBoImpl implements CustomerBO {
         int lastId = Integer.parseInt(lastItemId.substring(1));
         return String.format("C%03d",++lastId);
     }
+
+    @Override
+    public CustomerDTO getCustomerByContactNumber(String contactNumber) {
+        Customer cbc = customerDAO.findCustomerByContactNumber(contactNumber);
+        return new CustomerDTO(
+                cbc.getCustomerID(),
+                cbc.getFirstName(),
+                cbc.getLastName(),
+                cbc.getNic(),
+                cbc.getAddress(),
+                cbc.getContactNumber()
+        );
+
+    }
 }

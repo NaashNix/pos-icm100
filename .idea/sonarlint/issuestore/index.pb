@@ -35,14 +35,10 @@ I
 src/bo/custom/ItemBO.java,5/6/566e7d12aa26f124ad9900a71128f277c83a2a18
 U
 %src/controller/AddItemController.java,c/9/c941749f9fc22dc56a4d0dccc54275b46aa3bd69
-W
-'src/controller/DashboardController.java,9/4/94cea2dd1c2ab300175205d98b2203846b71e7d4
 G
 src/view/LoginForm.fxml,3/6/360d6d8c13934676281e9df5abd975e1337e3719
 I
 src/view/AddItemForm.fxml,1/1/11bc689a42151172df7fecbc2631bcd0dcc61ea4
-G
-src/view/Dashboard.fxml,e/a/eae2cdc69777a5a9ddd8731353f917f398d5f804
 G
 src/dao/DAOFactory.java,9/f/9f9767f330c3d674b64b13bf8d78355a1bc26128
 E

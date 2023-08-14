@@ -38,4 +38,24 @@ public class CustomerDAOImpl implements CustomerDAO {
         }
         return "C000";
     }
+
+    @Override
+    public Customer findCustomerByContactNumber(String contactNumber) {
+        try {
+            ResultSet resultSet = CrudUtil.executeQuery("SELECT*FROM customer WHERE contactNumber=?", contactNumber);
+            if(resultSet.next()){
+                return new Customer(
+                  resultSet.getString("customerID"),
+                  resultSet.getString("firstName"),
+                  resultSet.getString("lastName"),
+                  resultSet.getString("nic"),
+                  resultSet.getString("address"),
+                  resultSet.getString("contactNumber")
+                );
+            }
+        } catch (SQLException | ClassNotFoundException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
 }
