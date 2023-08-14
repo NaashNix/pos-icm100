@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="667.0" prefWidth="1000.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
    <children>
       <Label layoutX="36.0" layoutY="28.0" text="Customer Details">
@@ -28,13 +27,14 @@
       <TextField fx:id="txtLastName" layoutX="647.0" layoutY="90.0" prefHeight="24.0" prefWidth="302.0" promptText="Enter Last Name" />
       <Label layoutX="543.0" layoutY="93.0" text="Last Name :" />
       <Separator layoutX="57.0" layoutY="251.0" prefHeight="0.0" prefWidth="887.0" />
-      <TableView fx:id="tblItems" layoutX="57.0" layoutY="272.0" prefHeight="330.0" prefWidth="887.0">
+      <TableView fx:id="tblCustomers" layoutX="57.0" layoutY="272.0" prefHeight="330.0" prefWidth="887.0">
          <columns>
             <TableColumn fx:id="colCustomerID" prefWidth="122.0" text="CustomerID" />
-            <TableColumn fx:id="colFirstName" prefWidth="197.0" text="First Name" />
-            <TableColumn fx:id="colLastName" prefWidth="189.0" text="Last Name" />
-            <TableColumn fx:id="colContactNumber" prefWidth="158.0" text="Contact Number" />
-            <TableColumn fx:id="colAddress" prefWidth="220.0" text="Address" />
+            <TableColumn fx:id="colFirstName" prefWidth="150.0" text="First Name" />
+            <TableColumn fx:id="colLastName" prefWidth="170.0" text="Last Name" />
+            <TableColumn fx:id="colContactNumber" prefWidth="130.0" text="Contact Number" />
+            <TableColumn fx:id="colAddress" prefWidth="167.0" text="Address" />
+            <TableColumn fx:id="colNIC" prefWidth="147.0" text="NIC" />
          </columns>
       </TableView>
       <JFXButton fx:id="btnADD" buttonType="RAISED" layoutX="850.0" layoutY="206.0" onAction="#btnAddOnAction" prefHeight="32.0" prefWidth="97.0" style="-fx-background-color: #1abc9c;" text="ADD">
