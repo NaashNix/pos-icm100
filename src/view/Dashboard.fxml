@@ -135,7 +135,7 @@
             <Font size="15.0" />
          </font>
       </TextField>
-      <Label fx:id="lblOrderID" layoutX="809.0" layoutY="265.0" text="O-001" textFill="#2980b9">
+      <Label fx:id="lblOrderID" layoutX="809.0" layoutY="265.0" prefHeight="24.0" prefWidth="67.0" text="O-001" textFill="#2980b9">
          <font>
             <Font name="Roboto Black" size="20.0" />
          </font>

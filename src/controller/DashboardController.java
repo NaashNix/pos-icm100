@@ -3,6 +3,7 @@ package controller;
 import bo.BOFactory;
 import bo.custom.CustomerBO;
 import bo.custom.ItemBO;
+import bo.custom.OrderBO;
 import com.jfoenix.controls.JFXComboBox;
 import dto.CustomerDTO;
 import javafx.event.ActionEvent;
@@ -18,10 +19,16 @@ public class DashboardController {
     public TextField txtContactNumber;
     private final CustomerBO customerBO = (CustomerBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.CUSTOMER);
     private final ItemBO itemBO = (ItemBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.ITEM);
+    private final OrderBO orderBO = (OrderBO) BOFactory.getBoFactory().getBo(BOFactory.BoTypes.ORDER);
+
     public JFXComboBox<String> cmbItemSelector;
+    public Label lblOrderID;
 
     public void initialize(){
         setItemNames();
+
+        // Getting Next OrderID
+        lblOrderID.setText(orderBO.generateNextOrderID());
     }
 
     private void setItemNames() {
